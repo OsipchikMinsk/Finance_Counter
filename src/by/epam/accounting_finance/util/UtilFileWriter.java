@@ -6,20 +6,20 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.file.StandardOpenOption;
 
-public class FileReader implements Closeable {
+public class UtilFileWriter implements Closeable {
 
-    public static List<String> readFile (String path) throws DAOException{
-
-        List<String> fileData = new ArrayList<>();
+    public static boolean isWriteData (String path, String data) throws DAOException {
+        boolean isWrite;
         try {
-            fileData = Files.readAllLines(Paths.get(path));
+            Files.write(Paths.get(path), data.getBytes(), StandardOpenOption.APPEND);
+            isWrite= true;
         } catch (IOException e) {
+            isWrite = false;
             throw new DAOException(e);
         }
-        return fileData;
+        return isWrite;
     }
 
     @Override
