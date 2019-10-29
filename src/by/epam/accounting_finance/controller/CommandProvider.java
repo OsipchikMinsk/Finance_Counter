@@ -24,9 +24,10 @@ public class CommandProvider {
         CommandType commandType = null;
         Command command = null;
         try {
+            System.out.println();
             commandType = CommandType.valueOf(name.toUpperCase());
             command = repository.get(commandType);
-        } catch (IllegalThreadStateException | NullPointerException e) {
+        } catch ( NullPointerException  | IllegalArgumentException e) {
             command = repository.get(CommandType.WRONG_REQUEST);
         }
         return command;

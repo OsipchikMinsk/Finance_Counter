@@ -11,6 +11,7 @@ public class Controller {
 
     public String executeTask(String request) {
         //AUTHORIZATION Admin 1234Admin4321
+        //ADD_TRANSACTION 2000 200 29.10.2019
         System.out.println(request);
         String commandType;
         Command executionCommand;

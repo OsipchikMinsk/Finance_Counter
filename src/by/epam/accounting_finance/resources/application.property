@@ -2,4 +2,5 @@ user.login=Admin
 user.password=1234Admin4321
 path.property=D:\\Programirovanie\\PersonalFinances\\src\\by\\epam\\accounting_finance\\resources
 path.file=src\\by\\epam\\accounting_finance\\resources\\data.txt
+path.fileDB=src\\by\\epam\\accounting_finance\\resources\\writtenDB.txt
 authorization.file.path=D:\\Programirovanie\\PersonalFinances\\src\\by\\epam\\accounting_finance\\resources\\auth.txt

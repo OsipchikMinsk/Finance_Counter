@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface TransactionDAO {
     //create
-    void addTransaction (Transaction transaction) throws DAOException;
+    boolean addTransaction (Transaction transaction) throws DAOException;
 
     //read
    List<Transaction> getTransactionByDate (String date) throws DAOException;
@@ -16,7 +16,7 @@ public interface TransactionDAO {
     void updateTransaction (Transaction transaction) throws DAOException;
 
     //delete
-    void deleteTransaction (Transaction Transaction) throws DAOException;
+    boolean deleteTransaction (Transaction Transaction) throws DAOException;
 
 
 }

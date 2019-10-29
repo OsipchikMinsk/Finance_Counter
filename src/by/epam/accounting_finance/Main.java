@@ -9,9 +9,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Controller controller = new Controller();
-        String request = "AUTHORIZATION Admin 1234Admin4321";
-
+        String request = "AUTHORIZATIOn Admin 1234Admin4321";
+        String request1 = "ADD_TRANSACTIOn 2000 200 29.10.2019";
         System.out.println(controller.executeTask(request));
+        System.out.println(controller.executeTask(request1));
 
 
     }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface TransactionService {
     //create
-    void addTransaction (Transaction Transaction) throws ServiceException;
+    boolean addTransaction (Transaction Transaction) throws ServiceException;
 
     //read
     List<Transaction>  getTransactionByDate (String date) throws ServiceException;
@@ -16,6 +16,6 @@ public interface TransactionService {
     void updateTransaction (Transaction transaction) throws ServiceException;
 
     //delete
-    void deleteTransaction(Transaction transaction) throws ServiceException;
+    boolean deleteTransaction(Transaction transaction) throws ServiceException;
 
 }
