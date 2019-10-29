@@ -1,14 +1,14 @@
 package by.epam.accounting_finance.dao;
 
-import by.epam.accounting_finance.dao.impl.FileReaderDaoImpl;
-import by.epam.accounting_finance.dao.impl.FileUserDaoImpl;
-import by.epam.accounting_finance.dao.impl.FileWalletDaoImpl;
+import by.epam.accounting_finance.dao.impl.FileTransactionDao;
+import by.epam.accounting_finance.dao.impl.FileUserDao;
 
 public class DAOFactory {
+
     private static final DAOFactory instance = new DAOFactory();
-    private final UserDAO fileUserImpl = new FileUserDaoImpl();
-    private final WalletDAO fileWalletImpl = new FileWalletDaoImpl();
-    private final FileReaderDAO fileReaderDAOImpl = new FileReaderDaoImpl();
+    private final UserDao userDao = new FileUserDao();
+    private final TransactionDAO transactionDao = new FileTransactionDao();
+
 
     private DAOFactory() {
     }
@@ -17,15 +17,11 @@ public class DAOFactory {
         return instance;
     }
 
-    public UserDAO getFileUserImpl() {
-        return fileUserImpl;
+    public UserDao getUserDao() {
+        return userDao;
     }
 
-    public WalletDAO getFileWalletImpl() {
-        return fileWalletImpl;
-    }
-
-    public FileReaderDAO getFileReaderDAOImpl() {
-        return fileReaderDAOImpl;
+    public TransactionDAO getTransactionDao() {
+        return transactionDao;
     }
 }

@@ -3,9 +3,7 @@ package by.epam.accounting_finance.dao;
 import by.epam.accounting_finance.beans.User;
 
 public interface UserDao {
-    User getUser(String name);
 
-    User save(User user);
+    boolean authorization (String login, String password) throws DAOException;
 
-    void delete(User user);
 }

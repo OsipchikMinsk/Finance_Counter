@@ -8,22 +8,11 @@ public class User implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private Wallet wallet;
+    private long phoneNumber;
 
-    public User(String name, Wallet wallet) {
+    public User(String name, String date, long phoneNumber) {
         this.name = name;
-        this.wallet = wallet;
-    }
-
-    public User() {
-    }
-
-    public Wallet getWallet() {
-        return wallet;
-    }
-
-    public void setWallet(Wallet wallet) {
-        this.wallet = wallet;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
@@ -34,23 +23,34 @@ public class User implements Serializable{
         this.name = name;
     }
 
+     public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name);
+        return phoneNumber == user.phoneNumber &&
+                Objects.equals(name, user.name);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, phoneNumber);
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
+                ", phoneNumber=" + phoneNumber +
                 '}';
     }
 }

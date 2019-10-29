@@ -1,5 +1,5 @@
 user.login=Admin
 user.password=1234Admin4321
 path.property=D:\\Programirovanie\\PersonalFinances\\src\\by\\epam\\accounting_finance\\resources
-path.file=D:\\Programirovanie\\PersonalFinances\\src\\by\\epam\\accounting_finance\\resources\\data.txt
+path.file=src\\by\\epam\\accounting_finance\\resources\\data.txt
 authorization.file.path=D:\\Programirovanie\\PersonalFinances\\src\\by\\epam\\accounting_finance\\resources\\auth.txt
